@@ -9,7 +9,7 @@
   font-size: 62.5%;
 }
 
-.container {
+body {
   height: 100vh;
   width: 100vw;
 
@@ -26,6 +26,7 @@
   --bg-cards: #29292E;
   --bg-cards-active: #0A3442;
   --color-dark: #C4C4CC;
+  --color-light: #E1E1E6;
 }
 
 .lightMode {
@@ -33,6 +34,7 @@
   --bg-cards: #E1E1E6;
   --bg-cards-active: #02799D;
   --color-dark: #323238;
+  --color-light: #E1E1E6;
 }
 
 .hide {
@@ -70,6 +72,7 @@
 }
 
 .buttonControls {
+  cursor: pointer;
   background: transparent;
 }
 
@@ -94,6 +97,7 @@
 
   border-radius: 2.4rem;
   background: var(--bg-cards);
+  cursor: pointer;
 }
 
 
@@ -102,7 +106,7 @@
 }
 
 .active svg path{
-  fill: var(--bg-color);
+  fill: var(--color-light);
 } 
 
 svg path {
@@ -119,7 +123,7 @@ svg path {
 }
 
 .active .slider {
-  background: var(--bg-color);
+  background: var(--color-light);
 }
 
 .slider::-webkit-slider-thumb {
@@ -131,7 +135,7 @@ svg path {
 }
 
 .active .slider::-webkit-slider-thumb {
-  background-color: var(--bg-color);
+  background-color: var(--color-light);
 }
 
 .slider::-moz-range-thumb {
@@ -142,7 +146,7 @@ svg path {
 }
 
 .active .slider::-moz-range-thumb  {
-  background-color: var(--bg-color);
+  background-color: var(--color-light);
 }
 
 .slider::-ms-thumb {
@@ -153,7 +157,7 @@ svg path {
 }
 
 .active .slider::-ms-thumb  {
-  background-color: var(--bg-color);
+  background-color: var(--color-light);
 }
 
 
