@@ -13,6 +13,11 @@ const rain = document.querySelector('#rain');
 const coffeeshop = document.querySelector('#coffeeshop');
 const fireplace = document.querySelector('#fireplace');
 
+const volForest = document.querySelector('#volForest');
+const volRain = document.querySelector('#volRain');
+const volCoffee = document.querySelector('#volCoffee');
+const volFire = document.querySelector('#volFire');
+
 const minutesDisplay = document.querySelector('.minutes');
 const secondsDisplay = document.querySelector('.seconds');
 
@@ -94,6 +99,7 @@ minusMinutes.addEventListener('click', function() {
 });
 
 forest.addEventListener('click', function() {
+  sound.forest.volume = volForest.value / 100;
   forest.classList.add('active');
   sound.forest.play();
 
@@ -108,26 +114,47 @@ forest.addEventListener('click', function() {
 });
 
 rain.addEventListener('click', function() {
+  sound.rain.volume = volRain.value / 100;
   rain.classList.add('active');
   sound.rain.play();
+
+  forest.classList.remove('active');
   sound.forest.pause();
+
+  coffeeshop.classList.remove('active');
   sound.coffeeshop.pause();
+
+  fireplace.classList.remove('active');
   sound.fireplace.pause();
 });
 
 coffeeshop.addEventListener('click', function() {
+  sound.coffeeshop.volume = volCoffee.value / 100;
   coffeeshop.classList.add('active');
   sound.coffeeshop.play();
+
+  forest.classList.remove('active');
   sound.forest.pause();
+
+  rain.classList.remove('active');
   sound.rain.pause();
+
+  fireplace.classList.remove('active');
   sound.fireplace.pause();
 });
 
 fireplace.addEventListener('click', function() {
-  coffeeshop.classList.add('active');
+  sound.fireplace.volume = fireplace.value / 100;
+  fireplace.classList.add('active');
   sound.fireplace.play();
+
+  forest.classList.remove('active');
   sound.forest.pause();
+
+  rain.classList.remove('active');
   sound.rain.pause();
+
+  coffeeshop.classList.remove('active');
   sound.coffeeshop.pause();
 })
 
