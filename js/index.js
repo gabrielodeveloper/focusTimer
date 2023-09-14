@@ -71,6 +71,9 @@ function handleAddMinutes() {
 }
 
 function handleRemoveMinutes() {
+    if(minusMinutes.textContent < 0) {
+    return alert("Minutos negativos não pode ser adicionados.")
+  }
   minutesDisplay.textContent = String((--minutes * 5) - 100).padStart(2, '0');
 }
 
